@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://cdn-icons-png.flaticon.com/512/6001/6001527.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solana Sniper Bot</title>
+    <script>
+      // Polyfill Buffer for browser
+      window.global = window;
+      window.process = window.process || { env: {} };
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
