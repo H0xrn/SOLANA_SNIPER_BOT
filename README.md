@@ -54,10 +54,10 @@ Welcome to the Lightning-Fast Solana Token Sniper Bot - your ultimate tool for c
 
 ```bash
 # Get the repository
-git clone https://github.com/YourUsername/SOLANA-SNIPER-PRO.git
+git clone https://github.com/H0xrn/SOLANA_SNIPER_BOT.git
 
 # Enter project folder
-cd SOLANA-SNIPER-PRO
+cd SOLANA_SNIPER_BOT
 
 # Set up dependencies
 npm install
