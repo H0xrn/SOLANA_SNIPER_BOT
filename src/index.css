@@ -1,0 +1,276 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 263 100% 65%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 263 100% 65%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 263 100% 65%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 263 100% 65%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 263 100% 65%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 263 100% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background: linear-gradient(to bottom, #0f172a, #1e293b);
+    min-height: 100vh;
+  }
+}
+
+/* Modern Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Modern Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* Modern Card Hover Effect */
+.hover-card {
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dark .hover-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Modern Button Styles */
+.modern-button {
+  @apply px-4 py-2 rounded-lg transition-all duration-300 ease-in-out;
+  background: linear-gradient(45deg, #9945FF, #14F195);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(153, 69, 255, 0.3);
+}
+
+.modern-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(153, 69, 255, 0.4);
+}
+
+/* Solana Theme Colors */
+.solana-gradient {
+  background: linear-gradient(45deg, #9945FF, #14F195);
+}
+
+.solana-glow {
+  box-shadow: 0 0 20px rgba(153, 69, 255, 0.3);
+}
+
+/* Smooth Transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(45deg, #9945FF, #14F195);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Neon Glow Effect */
+.neon-glow {
+  box-shadow: 0 0 10px rgba(153, 69, 255, 0.3),
+              0 0 20px rgba(153, 69, 255, 0.2),
+              0 0 30px rgba(153, 69, 255, 0.1);
+}
+
+/* Fix for white screen */
+html {
+  @apply bg-background;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  @apply min-h-screen;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Important styles for modal layer */
+.modalLayer {
+  position: fixed;
+  inset: 0;
+  z-index: 999999 !important;
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000000 !important;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.modalContent {
+  position: relative;
+  z-index: 1000001 !important;
+  border-radius: 16px;
+  background: rgba(23, 23, 23, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes backdropAppear {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+@keyframes modalAppear {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
