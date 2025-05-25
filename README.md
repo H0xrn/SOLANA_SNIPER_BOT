@@ -23,6 +23,22 @@ Welcome to the Lightning-Fast Solana Token Sniper Bot - your ultimate tool for c
 - **Alert System**: Instant notifications via Telegram and email
 - **Activity Logging**: Comprehensive transaction and performance history
 
+## 📷 Screenshots
+
+<img width="1787" alt="Screenshot 2025-03-30 at 17 30 15" src="https://github.com/user-attachments/assets/3b345a6f-ab7b-4321-b680-f2f8e789ff24" />
+
+*Main application dashboard with dark-mode glass-morphism UI*
+
+<img width="1776" alt="Screenshot 2025-03-30 at 17 42 57" src="https://github.com/user-attachments/assets/53cb40dd-e59c-4af2-8f9d-d8295366851e" />
+
+*Advanced Sniper Configuration panel with multiple strategy options*
+
+<img width="1353" alt="Screenshot 2025-03-30 at 17 24 03" src="https://github.com/user-attachments/assets/204667a2-138f-4e5c-90e2-7db6362f5905" />
+
+*Detailed Transaction History with real-time success metrics*
+
+<img width="1392" alt="Screenshot 2025-03-30 at 17 32 35" src="https://github.com/user-attachments/assets/ab83eec1-9d71-4c11-beca-b44e3c6c44bf" />
+
 ## 📊 Performance Stats
 
 | Metric | Result |
