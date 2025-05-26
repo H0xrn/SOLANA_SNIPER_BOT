@@ -8,7 +8,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
-    "noImplicitAny": false,
+    "noImplicitAny": false, 
     "strict": false,
     "strictNullChecks": false,
     "forceConsistentCasingInFileNames": true,
