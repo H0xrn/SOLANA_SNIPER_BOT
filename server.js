@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import dotenv from 'dotenv';
 
-// Load environment variables from .env file
+// Load environment variables from .env file 
 dotenv.config();
 
 // Get the directory name of the current module (ES module equivalent of __dirname) 
